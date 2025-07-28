@@ -1,13 +1,13 @@
-package com.ubtechinc.Datatype;
+package com.ubtechinc.datatype;
 
-public class AbstractDataTypeUser {
-    public abstract class User{
+public class AbstractDataTypeDouble {
+
         protected String username;
         protected String password;
         protected String firstname;
         protected String lastname;
 
-        public User(String username, String password, String firstname, String lastname) {
+        public AbstractDataTypeDouble(String username, String password, String firstname, String lastname) {
             this.username = username;
             this.password = password;
             this.firstname = firstname;
@@ -38,4 +38,4 @@ public class AbstractDataTypeUser {
         }
 
     }
-}
+
