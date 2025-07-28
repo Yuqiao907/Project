@@ -1,16 +1,16 @@
-package com.ubtechinc.datatype;
+package com.ubtechinc.datatype.integertype;
 
 
 /*
 * public integer类
 * */
-public class AbstractDataTypeInteger {
+public class DataTypeInteger {
     private int number;
 
 /*
 * 构造
 * @param number*/
-    public AbstractDataTypeInteger(int number) {
+    public DataTypeInteger(int number) {
         this.number = number;
     }
 
