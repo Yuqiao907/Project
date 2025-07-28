@@ -9,7 +9,9 @@ public class Main {
     public static void main(String[] args) {
 
         DataAddition object = new DataAddition();
-        System.out.println(object.add(8));
+        System.out.println(object.addNum(8));
 
         }
     }
+
+
