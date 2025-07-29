@@ -1,4 +1,4 @@
-package com.ubtechinc.process;
+package com.ubtechinc.dependencytest;
 
 public class DataAddition {
 

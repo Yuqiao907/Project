@@ -1,38 +1,40 @@
-package com.ubtechinc.datatype.integertype;
+package com.ubtechinc.datatype;
 
+import com.ubtechinc.datatype.AbstractDataType;
 
-/*
+/**
+ * 四字节，32位
+ * 取值范围在 -2,147,483,648（-2 ^ 31）和 2,147,483,647（2 ^ 31 -1）（含）之间。如果没有特殊需求，整型数据就用 int
+ */
+
+/**
 * public integer类
 * */
-public class DataTypeInteger {
-    private int number;
+public class DataTypeInteger extends AbstractDataType<Integer> {
 
-/*
+
+/**
 * 构造
 * @param number*/
     public DataTypeInteger(int number) {
-        this.number = number;
+        super(number);
     }
 
-/*
-* @return number*/
-    public int getNumber() {
-        return number;
+    @Override
+    public void formalForm() {
+
     }
 
-    private void setNumber(int number) {
-        this.number = number;
-    }
-    /*
+    /**
      * @return square of number*/
     public int square(){
-        return number*number;
+        return defaultValue*defaultValue;
     }
 
-    /*
+    /**
      * @return random number*/
     public int randomMultiply(){
-        return  (int)(Math.random()*number);
+        return  (int)(Math.random()*defaultValue);
     }
 
 }

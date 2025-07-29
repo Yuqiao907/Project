@@ -1,41 +1,48 @@
 package com.ubtechinc.datatype;
+import com.ubtechinc.datatype.AbstractDataType;
 
-public class AbstractDataTypeDouble {
+/**
+ *自动类型转换优先级，double>float>long>int
+ * 隐式转换
+ * 强制转换
+ */
 
-        protected String username;
-        protected String password;
-        protected String firstname;
-        protected String lastname;
+/**
+ * Double占 64 位（8 字节）
+ * 实际开发中，如果不是特别大的金额，建议乘以 100 转成整型进行处理，或者用BigDecimal那个类
+ */
 
-        public AbstractDataTypeDouble(String username, String password, String firstname, String lastname) {
-            this.username = username;
-            this.password = password;
-            this.firstname = firstname;
-            this.lastname = lastname;
-        }
 
-        public String getUsername() {
-            return username;
-        }
+public class DataTypeDouble extends AbstractDataType<Double> {
 
-        public String getFirstName() {
-            return firstName;
-        }
 
-        public String getLastName() {
-            return lastName;
-        }
 
-        public boolean validatePassword(String password){
+    public DataTypeDouble(Double defaultDouble) {
+        super(defaultDouble);
+    }
 
-            return this.password.equals(password);
+    @Override
+    public void formalForm() {
 
-        }
+    }
 
-        @Override
-        public String toString() {
-            return firstName + " " + lastName + " (" + username + ")";
-        }
 
+
+    /**
+    静态方法相当于类，无需创建对象也能用，不支持多态重写，不支持调用实例变量
+    * */
+    public static double multiplyDouble(double former, double latter) {
+        return former * latter;
+    }
+
+    /**
+     *
+     * @param number
+     * @return num round to 2 decimalplaces
+     */
+    public double roundToTwoDecimalPlaces(double number) {
+        return Math.round(number * 100.0) / 100.0;
+    }
+        
     }
 
