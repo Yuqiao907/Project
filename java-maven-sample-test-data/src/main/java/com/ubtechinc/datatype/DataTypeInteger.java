@@ -8,14 +8,15 @@ import com.ubtechinc.datatype.AbstractDataType;
  */
 
 /**
-* public integer类
-* */
+ *public integer类
+ * @author MacBook Air
+ * @date 2025/7/29 22:23
+ */
+
 public class DataTypeInteger extends AbstractDataType<Integer> {
 
 
-/**
-* 构造
-* @param number*/
+
     public DataTypeInteger(int number) {
         super(number);
     }

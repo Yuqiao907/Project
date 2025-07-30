@@ -12,6 +12,11 @@ import com.ubtechinc.datatype.AbstractDataType;
  * 实际开发中，如果不是特别大的金额，建议乘以 100 转成整型进行处理，或者用BigDecimal那个类
  */
 
+/**
+ *public datatype double
+ * @author MacBook Air
+ * @date 2025/7/29 22:15
+ */
 
 public class DataTypeDouble extends AbstractDataType<Double> {
 
@@ -31,14 +36,20 @@ public class DataTypeDouble extends AbstractDataType<Double> {
     /**
     静态方法相当于类，无需创建对象也能用，不支持多态重写，不支持调用实例变量
     * */
+    /**
+     *
+     * @param former -first double
+     * @param latter - second double
+     * @return - product of two param
+     */
     public static double multiplyDouble(double former, double latter) {
         return former * latter;
     }
 
     /**
      *
-     * @param number
-     * @return num round to 2 decimalplaces
+     * @param number - double number to be rounded
+     * @return num round to 2 decimal places
      */
     public double roundToTwoDecimalPlaces(double number) {
         return Math.round(number * 100.0) / 100.0;

@@ -2,6 +2,8 @@ package com.ubtechinc.client;
 
 import com.ubtechinc.dependencytest.DataAddition;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -11,7 +13,8 @@ public class Main {
 
         DataAddition object = new DataAddition();
         System.out.println(object.addNum(8));
-
+        String s = "hello";
+        List<String> list = new ArrayList<String>();
         }
     }
 

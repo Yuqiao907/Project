@@ -6,6 +6,12 @@ import com.ubtechinc.datatype.AbstractDataType;
  * int和char方便互转
  */
 
+/**
+ *public datatype char
+ * @author MacBook Air
+ * @date 2025/7/29 22:01
+ */
+
 public class DataTypeChar extends AbstractDataType <Character> {
 
 
@@ -27,7 +33,7 @@ public class DataTypeChar extends AbstractDataType <Character> {
 
     /**
      * 把最后一个char提取出来转换成对应ASCII数字
-     * @param target
+     * @param target -string with its last char to extract
      */
     public void lastExtract (String target) {
 
@@ -46,8 +52,8 @@ public class DataTypeChar extends AbstractDataType <Character> {
 
     /**
      * ASCII char 转换成对应整数
-     * @param codePoint
-     * @return
+     * @param codePoint- char to be converted to integer
+     * @return - converted integer
      */
     public static int getNumericValue(char codePoint) {
         // 快速处理 0-9

@@ -41,8 +41,8 @@ public class DataTypeByte extends AbstractDataType <Byte>  {
 
     /**
      * 将String转换为byte
-     * @param input
-     * @return
+     * @param input -string to be converted to byte
+     * @return converted byte
      */
 
     public  byte[] myGetBytes(String input) {
@@ -57,7 +57,7 @@ public class DataTypeByte extends AbstractDataType <Byte>  {
 
     /**
      * 打印byte
-     * @param input
+     * @param input- byte array to be printed
      */
     public static void printBytes(byte[] input) {
         for (byte i : input){
@@ -74,7 +74,7 @@ public class DataTypeByte extends AbstractDataType <Byte>  {
     public static byte[] invertByte(byte[] input) {
         byte[] result = new byte[input.length];
         for (byte i: input){
-//防止符号位干扰，涉及二进制
+    //防止符号位干扰，涉及二进制
             result[i] = (byte)(255 - (input[i] & 0xFF));
 
         }
