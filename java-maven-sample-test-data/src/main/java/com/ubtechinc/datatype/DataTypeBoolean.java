@@ -71,8 +71,8 @@ public class DataTypeBoolean extends AbstractDataType<Boolean> {
      * @return boolean true if value in other equal with value in this class and is not null
      */
     public boolean equals(boolean other) {
-        //        确认内容不为空
-        //        这里由于继承了抽象类，default value被自动装箱成了Boolean包装类，所以可以用Boolean里面的equal方法
+        //确认内容不为空
+        //这里由于继承了抽象类，default value被自动装箱成了Boolean包装类，所以可以用Boolean里面的equal方法
         return defaultValue != null && defaultValue.equals(other);
     }
 

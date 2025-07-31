@@ -1,6 +1,6 @@
 package com.ubtechinc.datatype;
-import com.ubtechinc.datatype.AbstractDataType;
 
+import com.ubtechinc.datatype.AbstractDataType;
 
 
 /**
@@ -15,10 +15,11 @@ import com.ubtechinc.datatype.AbstractDataType;
 
 
 /**
-* Java 的 输入输出（I/O）类库，包括： •
-* FileOutputStream, ObjectOutputStream：写文件
-* FileInputStream, ObjectInputStream：读文件
-* Serializable：表示该类可以被“序列化”*/
+ * Java 的 输入输出（I/O）类库，包括： •
+ * FileOutputStream, ObjectOutputStream：写文件
+ * FileInputStream, ObjectInputStream：读文件
+ * Serializable：表示该类可以被“序列化”
+ */
 
 /**
  *Datatype byte
@@ -26,7 +27,7 @@ import com.ubtechinc.datatype.AbstractDataType;
  * @date 2025/7/28 23:44
  */
 
-public class DataTypeByte extends AbstractDataType <Byte>  {
+public class DataTypeByte extends AbstractDataType<Byte> {
     public DataTypeByte(byte defaultByte) {
         super(defaultByte);
     }
@@ -38,15 +39,16 @@ public class DataTypeByte extends AbstractDataType <Byte>  {
     }
 
 
-
     /**
      * 将String转换为byte
      * @param input -string to be converted to byte
      * @return converted byte
      */
 
-    public  byte[] myGetBytes(String input) {
-        if (input == null) return new byte[0];
+    public byte[] myGetBytes(String input) {
+        if (input == null) {
+            return new byte[0];
+        }
         byte[] result = new byte[input.length()];
         for (int i = 0; i < input.length(); i++) {
             char target = input.charAt(i);
@@ -60,9 +62,10 @@ public class DataTypeByte extends AbstractDataType <Byte>  {
      * @param input- byte array to be printed
      */
     public static void printBytes(byte[] input) {
-        for (byte i : input){
+        for (byte i : input) {
             System.out.print(i);
-    }}
+        }
+    }
 
 
     /**
@@ -73,9 +76,9 @@ public class DataTypeByte extends AbstractDataType <Byte>  {
 
     public static byte[] invertByte(byte[] input) {
         byte[] result = new byte[input.length];
-        for (byte i: input){
-    //防止符号位干扰，涉及二进制
-            result[i] = (byte)(255 - (input[i] & 0xFF));
+        for (byte i : input) {
+            //防止符号位干扰，涉及二进制
+            result[i] = (byte) (255 - (input[i] & 0xFF));
 
         }
         return result;

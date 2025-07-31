@@ -8,13 +8,13 @@ import com.ubtechinc.datatype.AbstractDataType;
  */
 
 /**
- *public integer类
+ * public integer类
+ *
  * @author MacBook Air
  * @date 2025/7/29 22:23
  */
 
 public class DataTypeInteger extends AbstractDataType<Integer> {
-
 
 
     public DataTypeInteger(int number) {
@@ -27,15 +27,17 @@ public class DataTypeInteger extends AbstractDataType<Integer> {
     }
 
     /**
-     * @return square of number*/
-    public int square(){
-        return defaultValue*defaultValue;
+     * @return square of number
+     */
+    public int square() {
+        return defaultValue * defaultValue;
     }
 
     /**
-     * @return random number*/
-    public int randomMultiply(){
-        return  (int)(Math.random()*defaultValue);
+     * @return random number
+     */
+    public int randomMultiply() {
+        return (int) (Math.random() * defaultValue);
     }
 
 }

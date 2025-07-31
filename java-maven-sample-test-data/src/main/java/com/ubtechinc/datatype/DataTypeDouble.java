@@ -1,8 +1,9 @@
 package com.ubtechinc.datatype;
+
 import com.ubtechinc.datatype.AbstractDataType;
 
 /**
- *自动类型转换优先级，double>float>long>int
+ * 自动类型转换优先级，double>float>long>int
  * 隐式转换
  * 强制转换
  */
@@ -21,7 +22,6 @@ import com.ubtechinc.datatype.AbstractDataType;
 public class DataTypeDouble extends AbstractDataType<Double> {
 
 
-
     public DataTypeDouble(Double defaultDouble) {
         super(defaultDouble);
     }
@@ -32,10 +32,9 @@ public class DataTypeDouble extends AbstractDataType<Double> {
     }
 
 
-
     /**
-    静态方法相当于类，无需创建对象也能用，不支持多态重写，不支持调用实例变量
-    * */
+     静态方法相当于类，无需创建对象也能用，不支持多态重写，不支持调用实例变量
+     * */
     /**
      *
      * @param former -first double
@@ -54,6 +53,6 @@ public class DataTypeDouble extends AbstractDataType<Double> {
     public double roundToTwoDecimalPlaces(double number) {
         return Math.round(number * 100.0) / 100.0;
     }
-        
-    }
+
+}
 

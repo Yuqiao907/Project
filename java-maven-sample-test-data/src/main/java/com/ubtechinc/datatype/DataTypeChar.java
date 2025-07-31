@@ -1,4 +1,5 @@
 package com.ubtechinc.datatype;
+
 import com.ubtechinc.datatype.AbstractDataType;
 
 /**
@@ -7,19 +8,20 @@ import com.ubtechinc.datatype.AbstractDataType;
  */
 
 /**
- *public datatype char
+ * public datatype char
+ *
  * @author MacBook Air
  * @date 2025/7/29 22:01
  */
 
-public class DataTypeChar extends AbstractDataType <Character> {
+public class DataTypeChar extends AbstractDataType<Character> {
 
 
     private int defaultInt;
 
-    public DataTypeChar( char defaultChar) {
+    public DataTypeChar(char defaultChar) {
 
-        super( defaultChar);
+        super(defaultChar);
         this.defaultInt = 0;
     }
 
@@ -29,22 +31,21 @@ public class DataTypeChar extends AbstractDataType <Character> {
     }
 
 
-
-
     /**
      * 把最后一个char提取出来转换成对应ASCII数字
+     *
      * @param target -string with its last char to extract
      */
-    public void lastExtract (String target) {
+    public void lastExtract(String target) {
 
         char lastTarget = target.charAt(target.length() - 1);
         this.defaultInt = (int) lastTarget;
 
-
     }
 
     /**
-     * @return default integer*/
+     * @return default integer
+     */
 
     public int getDefaultInt() {
         return defaultInt;
@@ -52,6 +53,7 @@ public class DataTypeChar extends AbstractDataType <Character> {
 
     /**
      * ASCII char 转换成对应整数
+     *
      * @param codePoint- char to be converted to integer
      * @return - converted integer
      */
@@ -74,7 +76,7 @@ public class DataTypeChar extends AbstractDataType <Character> {
     }
 
 
-    }
+}
 
 
 
